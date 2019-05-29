@@ -1,0 +1,26 @@
+
+{% extends 'job/base.html' %}
+{% load static %}
+{% block content %}
+
+
+	{% for post in posts %}
+	<article class="media content-section">
+    <!-- <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}" /> -->
+  <div class="media-body">
+    <div class="article-metadata">
+    	 <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+      <a class="mr-2" href="#"><span class="glyphicon glyphicon-user"></span><b>Posted By:</b> {{ post.author }}</a><br>
+      <small class="text-muted"><span class="glyphicon glyphicon-hourglass"></span><b>Date Posted:</b> {{ post.date_posted }}</small><br/>
+      <small class="text-muted"><span class="glyphicon glyphicon-gbp"></span><b>Salary:</b> {{ post.salary }} </small><br/>
+      <small class="text-muted"><span class="glyphicon glyphicon-calendar"></span><b>Job Duration:</b> {{ post.duration }}</small><br/>
+      <small class="text-muted"><span class="glyphicon glyphicon-picture"></span><b>Job Location:</b> {{ post.location }}</small><br/>
+      <small class="text-muted"><span class="glyphicon glyphicon-user"></span><b>Contact:</b> {{ post.contact }}</small><br/>
+    </div>
+   
+    <p class="article-content"><b>Job Description:</b> {{ post.description }}</p>
+  </div>
+
+  </article>
+{% endfor %}
+{% endblock content %}

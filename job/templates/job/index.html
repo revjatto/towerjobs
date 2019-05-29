@@ -1,0 +1,53 @@
+{% extends "job/base2.html" %}
+{% load static %}
+{% block content %}
+
+<div class="jumbotron text-center">
+    <div class="container">
+      <a href="/" class="lang-logo">
+        <img src="{% static 'tower.png'%}">
+      </a>
+      <h1>towerjobs.co.uk</h1>
+      <p>List your jobs on our platform for as little as £10 per job.</p>
+      <a type="button" class="btn btn-lg btn-success" href="{% url 'post-create' %}"><span class="glyphicon glyphicon-flash"></span> Post a Job</a>
+      <a type="button" class="btn btn-lg btn-primary" href="{% url 'register' %}"><span class="glyphicon glyphicon-download"></span> Sign Up today</a>
+    </div>
+  </div>
+
+  <!-- Landing Page content -->
+
+  <div class="container">
+    <div class="alert alert-info text-center" role="alert">
+      Search for jobs<a href="https://devcenter.heroku.com/articles/getting-started-with-python" class="alert-link"> Today</a>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h3><span class="glyphicon glyphicon-info-sign"></span> About Our Platform</h3>
+        <ul>
+          <li>Manage your candidate like a pro <a href="{% url 'register' %}">List your job now</a> on our platform. Flexible recruiting options for every business</li>
+  
+          <li>Reach millions of jobseeker online <a href="{% url 'job-jobs' %}">jobs</a>, helping you to get the right candidate for your new job posting.</li>
+          
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <h3><span class="glyphicon glyphicon-link"></span> Candidate Corner</h3>
+        <ul>
+          <li>How to motivate yourself for the next job move<a href="{% url 'job-motivate' %}"> Motivation</a></li>
+          <li>how to get your next job:</li>
+          
+        </ul>
+        <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
+        <ul>
+          <li><a href="{% url 'job-about' %}">CV Clinic</a></li>
+          <li><a href="{% url 'job-interview' %}">Interview Tips</a></li>
+          
+        </ul>
+      </div>
+    </div> <!-- row -->
+     <div class="alert alert-success text-center" role="alert">
+      Reach more candidates through desktop, mobile and Job Alerts
+    </div>
+  </div>
+{% endblock content %}
