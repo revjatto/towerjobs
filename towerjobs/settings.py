@@ -25,7 +25,7 @@ SECRET_KEY = 'qvnes)*)0+zie&p6vb@wt7br-ou0ohf4!@j2sa(-y__5qnv^-r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tower-jobs.herokuapp.com' ]
 
 
 # Application definition
