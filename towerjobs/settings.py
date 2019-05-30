@@ -25,8 +25,9 @@ SECRET_KEY = 'qvnes)*)0+zie&p6vb@wt7br-ou0ohf4!@j2sa(-y__5qnv^-r'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['tower-jobs.herokuapp.com' ]
+# ALLOWED_HOSTS = ['tower-jobs.herokuapp.com' ]
 
+ALLOWED_HOSTS = ['*' ]
 
 # Application definition
 
@@ -76,13 +77,23 @@ WSGI_APPLICATION = 'towerjobs.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'enterpriseDB',
+        'USER': 'jattobr',
+        'PASSWORD': 'U24tuc9r',
+        'HOST': 'localhost',
+        'PORT': '5433'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
